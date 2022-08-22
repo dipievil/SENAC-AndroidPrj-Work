@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SENAC - AndroidPrj - Work</string>
+    <string name="lbl_type_key">Digite sua chave</string>
+    <string name="hint_key">Digite sua chave</string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="book_name">Nome do livro</string>
+    <string name="author_name">Nome do autor</string>
+</resources>
