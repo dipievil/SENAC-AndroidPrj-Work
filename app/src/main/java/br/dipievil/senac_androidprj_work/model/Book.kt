@@ -1,6 +1,6 @@
 package br.dipievil.senac_androidprj_work.model
 
-data class Book(var id: Int = 0,
+data class Book(var id: String? = null,
                 var title: String? = null,
                 var subtitle: String? = null,
                 var volume: Int = 0,
