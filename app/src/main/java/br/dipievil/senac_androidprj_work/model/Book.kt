@@ -16,3 +16,26 @@ data class Book(var id: String? = null,
                 var status: String? = null,
                 var author: String? = null,
                 var pages: Int = 0)
+{
+    fun toMap(): Map<String, Any?> {
+        return mapOf(
+            "id" to id,
+            "author" to author,
+            "title" to title,
+            "subtitle" to subtitle,
+            "volume" to volume,
+            "edition" to edition,
+            "year" to year,
+            "publisher" to publisher,
+            "area" to area,
+            "genre" to genre,
+            "subgenre" to subgenre,
+            "isbn" to isbn,
+            "cdd" to cdd,
+            "aquisition" to aquisition,
+            "status" to status,
+            "author" to author,
+            "pages" to pages
+        )
+    }
+}

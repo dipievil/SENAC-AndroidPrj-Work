@@ -28,7 +28,6 @@ class BookListAdapter(private val books: List<Book>, internal val context: Conte
         holder.tvTitle.text = book.title
         holder.tvAuthor.text = book.pages.toString()
 
-
         if(position%2==0)
             holder.layout.setBackgroundColor(Color.rgb(240,240,240))
         else
