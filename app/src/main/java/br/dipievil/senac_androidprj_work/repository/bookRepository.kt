@@ -12,8 +12,7 @@ class bookRepository : dbHandler() {
 
         var addStatus = true;
 
-
-        db.collection("Livros")
+        db.collection(COLLECTION_NAME)
             .add(book)
             .addOnSuccessListener { documentReference ->
                 Log.d("FIREBASE", "DocumentSnapshot added with ID: ${documentReference.id}")
@@ -25,13 +24,23 @@ class bookRepository : dbHandler() {
         return addStatus;
     }
 
+    fun deleteBook(id : String){
+        var db = Firebase.firestore
+
+        db.collection(COLLECTION_NAME)
+            .document(id)
+            .delete()
+            .addOnSuccessListener { Log.d("FIREBASE", "DocumentSnapshot successfully deleted!") }
+            .addOnFailureListener { e -> Log.w("FIREBASE", "Error deleting document", e) }
+    }
+
     fun getBooks() : MutableList<Book> {
 
         var books: MutableList<Book> = mutableListOf()
 
         var db = Firebase.firestore
 
-        db.collection("livros")
+        db.collection(COLLECTION_NAME)
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
@@ -63,5 +72,9 @@ class bookRepository : dbHandler() {
             }
 
         return books;
+    }
+
+    companion object{
+        val COLLECTION_NAME = "Livros"
     }
 }

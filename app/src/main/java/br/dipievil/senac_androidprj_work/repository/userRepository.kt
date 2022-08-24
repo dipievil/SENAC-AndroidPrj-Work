@@ -7,13 +7,12 @@ import com.google.firebase.ktx.Firebase
 
 class userRepository :dbHandler() {
 
-
     fun addUser(user: User) : Boolean{
         var db = Firebase.firestore
 
         var addStatus = true;
 
-        db.collection("Livros")
+        db.collection(COLLECTION_NAME)
             .add(user)
             .addOnSuccessListener { documentReference ->
                 Log.d("FIREBASE", "DocumentSnapshot added with ID: ${documentReference.id}")
@@ -25,6 +24,15 @@ class userRepository :dbHandler() {
         return addStatus;
     }
 
+    fun deleteUser(id : String){
+        var db = Firebase.firestore
+
+        db.collection(bookRepository.COLLECTION_NAME)
+            .document(id)
+            .delete()
+            .addOnSuccessListener { Log.d("FIREBASE", "DocumentSnapshot successfully deleted!") }
+            .addOnFailureListener { e -> Log.w("FIREBASE", "Error deleting document", e) }
+    }
 
     fun getUsers() : MutableList<User> {
 
@@ -32,7 +40,7 @@ class userRepository :dbHandler() {
 
         var db = Firebase.firestore
 
-        db.collection("usuários")
+        db.collection(COLLECTION_NAME)
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
@@ -57,5 +65,9 @@ class userRepository :dbHandler() {
 
     fun deleteUser() : Boolean{
         return true;
+    }
+
+    companion object{
+        val COLLECTION_NAME = "Usuários"
     }
 }

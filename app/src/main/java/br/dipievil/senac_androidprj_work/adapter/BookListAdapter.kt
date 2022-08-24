@@ -2,23 +2,27 @@ package br.dipievil.senac_androidprj_work.adapter
 
 import android.content.Context
 import android.graphics.Color
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import br.dipievil.senac_androidprj_work.R
 import br.dipievil.senac_androidprj_work.model.Book
 
-class BookListAdapter(private val books: List<Book>, internal val context: Context,
-                  private val callbacks: (Int,String) -> Unit) :
-    RecyclerView.Adapter<ListAdapter.ViewHolder>() {
+class BookListAdapter(private val books: MutableList<Book>) :
+    RecyclerView.Adapter<BookListAdapter.ViewHolder>() {
 
     //Create the view
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.activity_books, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(
+            R.layout.activity_books,
+            parent,
+            false)
         return ViewHolder(view);
     }
 
@@ -34,7 +38,7 @@ class BookListAdapter(private val books: List<Book>, internal val context: Conte
             holder.layout.setBackgroundColor(Color.rgb(255,255,255))
 
         holder.btnViewMenu.setOnClickListener{
-            this.callbacks(position,"editar")
+            Log.i("Info","Clicou no botão")
         }
     }
 

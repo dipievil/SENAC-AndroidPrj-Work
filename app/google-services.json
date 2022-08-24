@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "881468418867",
+    "firebase_url": "https://livroaberto-5fdeb-default-rtdb.firebaseio.com",
+    "project_id": "livroaberto-5fdeb",
+    "storage_bucket": "livroaberto-5fdeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881468418867:android:54c4e1065ef52633abac46",
+        "android_client_info": {
+          "package_name": "br.dipievil.senac_androidprj_work"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881468418867-a2tgrcne7msoslf2m7uelthi99t9i7rr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj0HpVEi4tPuMXgNAtQGAxYIeMSJQyqVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881468418867-a2tgrcne7msoslf2m7uelthi99t9i7rr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
