@@ -5,7 +5,7 @@ import br.dipievil.senac_androidprj_work.model.User
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class userRepository :dbHandler() {
+class UserRepository :DbHandler() {
 
     fun addUser(user: User) : Boolean{
         var db = Firebase.firestore
@@ -27,7 +27,7 @@ class userRepository :dbHandler() {
     fun deleteUser(id : String){
         var db = Firebase.firestore
 
-        db.collection(bookRepository.COLLECTION_NAME)
+        db.collection(BookRepository.COLLECTION_NAME)
             .document(id)
             .delete()
             .addOnSuccessListener { Log.d("FIREBASE", "DocumentSnapshot successfully deleted!") }

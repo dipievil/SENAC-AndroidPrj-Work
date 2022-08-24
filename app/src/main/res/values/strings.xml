@@ -5,4 +5,14 @@
     <string name="btn_entrar">Entrar</string>
     <string name="book_name">Nome do livro</string>
     <string name="author_name">Nome do autor</string>
+    <string name="name">Nome</string>
+    <string name="sub_genre">Sub gênero</string>
+    <string name="lbl_genre">Gênero</string>
+    <string name="lbl_area">Area</string>
+    <string name="etPublisher">Publisher</string>
+    <string name="lbl_year">Year</string>
+    <string name="lbl_edition">Edição</string>
+    <string name="lbl_volume">Volume</string>
+    <string name="lbl_subtitle">Subtítulo</string>
+    <string name="lbl_pages">Páginas</string>
 </resources>

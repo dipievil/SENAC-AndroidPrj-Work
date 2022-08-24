@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.UsersActivity">
 
-    <include layout="@layout/users_list"></include>
+    <include layout="@layout/content_users"></include>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

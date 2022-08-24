@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.BooksActivity">
 
-        <include layout="@layout/books_list">
-
-        </include>
+    <include layout="@layout/content_books"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

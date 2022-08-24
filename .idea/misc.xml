@@ -5,7 +5,7 @@
       <map>
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_area.xml" value="0.2" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_books.xml" value="0.19429347826086957" />
-        <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_edit_book.xml" value="0.13903985507246377" />
+        <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_edit_book.xml" value="0.22" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_edit_user.xml" value="0.19429347826086957" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_list_book.xml" value="0.13903985507246377" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_list_users.xml" value="0.19429347826086957" />
@@ -13,6 +13,7 @@
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/activity_users.xml" value="0.19429347826086957" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/books_list.xml" value="0.19429347826086957" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/books_list_item.xml" value="0.1284796573875803" />
+        <entry key="..\:/src/android/Proj/app/src/main/res/layout/content_users.xml" value="0.14" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/users_list.xml" value="0.4255952380952381" />
         <entry key="..\:/src/android/Proj/app/src/main/res/layout/users_list_item.xml" value="0.19429347826086957" />
       </map>

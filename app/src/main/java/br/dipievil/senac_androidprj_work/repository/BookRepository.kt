@@ -5,7 +5,7 @@ import br.dipievil.senac_androidprj_work.model.Book
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class bookRepository : dbHandler() {
+class BookRepository : DbHandler() {
 
     fun addBook(book: Book) : Boolean{
         var db = Firebase.firestore
