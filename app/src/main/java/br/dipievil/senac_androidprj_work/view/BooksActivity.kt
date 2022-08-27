@@ -28,7 +28,7 @@ class BooksActivity : AppCompatActivity() {
 
         viewAdapter = BookListAdapter(books, this)
 
-        rvBooks = findViewById(R.id.rvBooks)
+        rvBooks = findViewById(R.id.rvBook)
 
         val dbHandler = BookRepository()
         books = dbHandler.getBooks()

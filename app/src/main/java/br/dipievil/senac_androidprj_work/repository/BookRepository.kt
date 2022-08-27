@@ -2,6 +2,7 @@ package br.dipievil.senac_androidprj_work.repository
 
 import android.util.Log
 import br.dipievil.senac_androidprj_work.model.Book
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -41,7 +42,7 @@ class BookRepository : DbHandler() {
         var db = Firebase.firestore
 
         db.collection(COLLECTION_NAME)
-            .get()
+            .orderBy("Título", Query.Direction.DESCENDING).get()
             .addOnSuccessListener { result ->
                 for (document in result) {
                     var id = document.id as String
