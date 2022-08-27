@@ -2,19 +2,20 @@ package br.dipievil.senac_androidprj_work.adapter
 
 import android.content.Context
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import br.dipievil.senac_androidprj_work.R
 import br.dipievil.senac_androidprj_work.model.Book
 
-class BookListAdapter(private val books: MutableList<Book>) :
+
+class BookListAdapter(private val books: MutableList<Book>, internal val context: Context) :
     RecyclerView.Adapter<BookListAdapter.ViewHolder>() {
 
     //Create the view
@@ -37,8 +38,26 @@ class BookListAdapter(private val books: MutableList<Book>) :
         else
             holder.layout.setBackgroundColor(Color.rgb(255,255,255))
 
+        val popup = PopupMenu(context, holder.btnViewMenu)
+
         holder.btnViewMenu.setOnClickListener{
-            Log.i("Info","Clicou no botão")
+            popup.inflate(R.menu.book_options_menu)
+
+                fun onMenuItemClick(item: MenuItem): Boolean {
+                    when (item.getItemId()) {
+                        R.id.menu1 -> {
+                            Toast.makeText(context, "Menu 1", Toast.LENGTH_LONG).show()                        }
+                        R.id.menu2 -> {
+                            Toast.makeText(context, "Menu 2", Toast.LENGTH_LONG).show()
+                        }
+                        R.id.menu3 -> {
+                            Toast.makeText(context, "Menu 3", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                    return false
+                }
+
+            popup.show()
         }
     }
 
@@ -52,4 +71,5 @@ class BookListAdapter(private val books: MutableList<Book>) :
         var btnViewMenu : TextView = view.findViewById(R.id.btnViewOptions)
         var layout: LinearLayout = view.findViewById(R.id.linearLayout)
     }
+
 }

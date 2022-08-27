@@ -32,7 +32,7 @@ data class Book(var id: String? = null,
             "subgenre" to subgenre,
             "isbn" to isbn,
             "cdd" to cdd,
-            "aquisition" to aquisition,
+            "acquisition" to aquisition,
             "status" to status,
             "author" to author,
             "pages" to pages

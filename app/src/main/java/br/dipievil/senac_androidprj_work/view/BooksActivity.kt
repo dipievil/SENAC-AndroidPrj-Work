@@ -19,25 +19,23 @@ class BooksActivity : AppCompatActivity() {
     var books: MutableList<Book> = ArrayList<Book>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        rvBooks = findViewById(R.id.rvBooks)
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_books)
     }
 
     override fun onResume() {
         super.onResume()
+
+        viewAdapter = BookListAdapter(books, this)
+
+        rvBooks = findViewById(R.id.rvBooks)
+
         val dbHandler = BookRepository()
         books = dbHandler.getBooks()
-
-        viewAdapter = BookListAdapter(books);
 
         rvBooks.layoutManager = LinearLayoutManager(this)
         rvBooks.adapter = viewAdapter
 
         linearLayoutManager = LinearLayoutManager(this)
-        rvBooks.layoutManager = linearLayoutManager
-        rvBooks.adapter = viewAdapter
     }
 }

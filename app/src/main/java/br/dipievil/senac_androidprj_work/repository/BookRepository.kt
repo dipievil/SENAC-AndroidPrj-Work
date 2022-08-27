@@ -45,21 +45,21 @@ class BookRepository : DbHandler() {
             .addOnSuccessListener { result ->
                 for (document in result) {
                     var id = document.id as String
-                    var status = document.data.getValue("status") as String
-                    var title = document.data.getValue("title") as String
-                    var author = document.data.getValue("author") as String
-                    var subtitle = document.data.getValue("subtitle") as String
-                    var volume = document.data.getValue("volume") as Int
-                    var publisher = document.data.getValue("publisher") as String
-                    var year = document.data.getValue("year") as String
-                    var area = document.data.getValue("area") as String
-                    var genre = document.data.getValue("genre") as String
-                    var isbn = document.data.getValue("isbn") as String
-                    var cdd = document.data.getValue("cdd") as String
-                    var acquisition = document.data.getValue("acquisition") as String
-                    var pages = document.data.getValue("pages") as Int
-                    var subgenre = document.data.getValue("subgenre") as String
-                    var edition = document.data.getValue("edition") as Int
+                    var status = document.data.getValue("Status") as String
+                    var title = document.data.getValue("Título") as String
+                    var author = document.data.getValue("Autor") as String
+                    var subtitle = document.data.getValue("Sub-título") as String
+                    var volume = document.data.getValue("Volume") as Int
+                    var publisher = document.data.getValue("Editora") as String
+                    var year = document.data.getValue("Ano") as String
+                    var area = document.data.getValue("Área") as String
+                    var genre = document.data.getValue("Gênero") as String
+                    var subgenre = document.data.getValue("Subgênero") as String
+                    var isbn = document.data.getValue("ISBN") as String
+                    var cdd = document.data.getValue("CDD") as String
+                    var acquisition = document.data.getValue("Aquisição") as String
+                    var pages = document.data.getValue("Páginas") as Int
+                    var edition = document.data.getValue("Edição") as Int
 
                     val dbBook = Book(id,title,subtitle,volume, edition,year,publisher,area,
                         genre,subgenre,isbn,cdd, acquisition,status,author,pages)
